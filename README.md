@@ -20,3 +20,11 @@ the app is able to sort the highest and lowest quarter in year
  the app can print data in different chart format
   - Histogram (block format)
   - line format
+
+## Use case
+The user want to know:
+- the highest/lowest week in Year/Q1/Q2/Q3/Q4
+- the highest/lowest Q in Year
+- The user is able to print a speciefiek expense value ( by giving the weeknummer and expense name)
+- The user is able to print the expense value of Q1/Q2/Q3/Q4
+- The user is able to see in graph all expense value
