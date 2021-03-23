@@ -25,7 +25,6 @@ Table_manager::Table_manager(Data_table &obj, char *key)
     //create table
     std::cout << "________________CREATE TABLE_____________" << std::endl;
     m_table = this->create_table(header_box, tmp_week_data_box_box);
-    // this->print_test(m_table);
 
     //remove colum
     auto colum_location = this->location_ignore_colum(m_table, key);
@@ -33,10 +32,6 @@ Table_manager::Table_manager(Data_table &obj, char *key)
 
     //remove row
     m_table = this->remove_row(m_table, key);
-
-
-    // this->print(location_ignore_row(m_table, key));
-    this->print_test(m_table);
 }
 
 matrix_string Table_manager::create_table(std::vector<std::string> &header_box, matrix_string &data_box_box)
