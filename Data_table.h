@@ -97,13 +97,11 @@ public:
      */
    const unsigned int locate_item(const std::string &item);
 
-   void testme(); //tmp
    std::vector<std::string> create_data_box(const std::string& input_data);
    std::vector<std::string>  get_week_data_box( const std::string& week_nummer);
    std::string get_week_item_data(const std::string &item_input, const std::string &week_input);
    std::vector<std::string> get_item_data_box(const std::string& item_input);
    std::vector<std::vector<std::string>> get_week_data_box_box();
-   std::vector<std::vector<std::string>> create_table();
    std::vector<std::string> get_year_data_box();
 };
 
