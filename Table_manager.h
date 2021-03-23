@@ -111,5 +111,4 @@ public:
     matrix_string remove_row (matrix_string &table, char *key);
 };
 
-
 #endif
