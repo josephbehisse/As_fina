@@ -1,5 +1,6 @@
 #include "Table_manager.h"
 #include "Sort.h"
+#include <iomanip>
 
 Table_manager::Table_manager(Data_table &obj)
 {
@@ -32,6 +33,7 @@ Table_manager::Table_manager(Data_table &obj, char *key)
 
     //remove row
     m_table = this->remove_row(m_table, key);
+
 }
 
 matrix_string Table_manager::create_table(std::vector<std::string> &header_box, matrix_string &data_box_box)
@@ -44,6 +46,9 @@ matrix_string Table_manager::create_table(std::vector<std::string> &header_box, 
     }
     return table_result;
 }
+
+matrix_string Table_manager::get_table() const { return m_table;};
+
 
 std::vector<unsigned int> Table_manager::location_ignore_colum(matrix_string &table, char *key)
 {
@@ -119,52 +124,3 @@ matrix_string Table_manager::remove_colum(matrix_string &table, char *key)
     return table;
 }
 
-
-
-
-
-//don't know why I need this  => deleled ?
-// matrix_string Table_manager::get_spec_row_box_box(Data_table &obj, const unsigned int row_number)
-// {
-//     auto tmp_tab = m_table;
-//     auto row = tmp_tab;
-//     std::vector<std::vector<std::string>> spec_row_box_box;
-//     for (int i = 0; i < row.size(); i++)
-//     {
-//         if (i == row_number)
-//         {
-//             spec_row_box_box.push_back(row[i]);
-//             return spec_row_box_box;
-//         }
-//     }
-//     //Error //
-//     return spec_row_box_box;
-// }
-
-
-
-template <typename T>
-void Table_manager::print_test(T box_box)
-{
-    std::cout << "___________print()_____________" << std::endl;
-    for (auto &box : box_box)
-    {
-        for (auto &data : box)
-        {
-            std::cout << " " << data << " |";
-        }
-        std::cout << std::endl;
-    }
-}
-
-template <typename T>
-void Table_manager::print(T box)
-{
-    std::cout << "___________print()_____________" << box.size() << std::endl;
-
-    for (auto &data : box)
-    {
-        std::cout << " " << data << " |";
-    }
-    std::cout << std::endl;
-}

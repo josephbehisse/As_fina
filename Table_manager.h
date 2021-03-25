@@ -1,3 +1,17 @@
+/*
+  ==============================================================================
+   This file is part of my HOBBY PROJECT.
+   Copyright (c) 2021
+   Author: Joseph Behisse
+   Permission to use, copy, modify, and/or distribute this software for any purpose
+   with or without fee is hereby granted provided that the above copyright notice and
+   this permission notice appear in all copies.
+   The code IS PROVIDED "AS IS" WITHOUT ANY WARRANTY, AND ALL WARRANTIES, WHETHER
+   EXPRESSED OR IMPLIED, INCLUDING MERCHANTABILITY AND FITNESS FOR PURPOSE, ARE
+   DISCLAIMED.
+  ==============================================================================
+*/
+
 #ifndef TABLE_MANAGER_H
 #define TABLE_MANAGER_H
 
@@ -45,10 +59,10 @@ private:
 
 public:
 
-    template <typename T>
-    void print_test(T box_box); //tmp
-    template <typename T>
-    void print(T box); //tmp
+    // template <typename T>
+    // void print_test(T box_box); //tmp
+    // template <typename T>
+    // void print(T box); //tmp
 
     /**
      * @brief Construct a new Table_manager object
@@ -109,6 +123,14 @@ public:
      * @return matrix_string a new table
      */
     matrix_string remove_row (matrix_string &table, char *key);
+
+    /**
+     * @brief Get the table object
+     * 
+     * @return matrix_string table
+     */
+    matrix_string get_table() const;
 };
+
 
 #endif
