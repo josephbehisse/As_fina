@@ -1,6 +1,8 @@
 #ifndef BOX_H
 #define BOX_H
 
+#include "File_x.h"
+
 #ifndef JOSEPH
 #define JOSEPH
 
@@ -8,32 +10,20 @@
 
 #endif
 
-/**
- *
- * This class create "your comment here"
- *
- */
 class Box
 {
 private:
-/**
- * @brief "your comment here"
- *
- * @return "your comment here"
- */
     std::vector<int> data;
+    std::vector<std::string> m_data;
 public:
-/**
- * @brief Construct a new Box object
- *
- * @param data_line "your comment here"
- */
-    Box(std::string data_line);
+    Box();
     /**
-     * @brief "your comment here"
-     * 
+     * @brief
+     *
+     * @param myfile
+     * @return std::vector<std::string>
      */
-    void show_data();
+    std::vector<std::string>  init(File_X &myfile);
 };
 
-#endif // !DATA_MANAGER_H
+#endif
